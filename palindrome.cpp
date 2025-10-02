@@ -5,13 +5,14 @@ class palindrome {
 public:
     palindrome(string num): n(num){}
     bool isPalindrome() {
-        for (int i = 0; i < n.length();i++){
-            if (n[i] != n[n.length() -1 - i]){
-                return false;
-            }
-            else{
-                return true;
-            }
+    for (int i = 0; i < n.length() / 2; i++) {
+        if (n[i] != n[n.length() - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
         }
     }
 };
